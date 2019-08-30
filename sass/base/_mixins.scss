@@ -1,0 +1,5 @@
+@mixin smallScreen {
+  @media (min-width: 550px) {
+    @content;
+  }
+}

@@ -6,13 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Exo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Exo|Open+Sans&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <div class="container">
-    <h1 class="app-title">Science!</h1>
-  </div>
+  <header class="header container">
+    <img src="{{ url_for('static', filename='logo.png') }}" class="header__image" alt="Icon of Gali the science bot">
+    <h1 class="header__title">Gali Science</h1>
+    <p class="header__description">The latest science news from across the web. Follow Gali the Science Bot on Twitter <a href="https://twitter.com/GaliScienceBot" target="_blank">@GaliScienceBot</a>.</p>
+  </header>
 </body>
 </html>

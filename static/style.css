@@ -804,10 +804,40 @@ there.
 /* Larger than desktop */
 /* Larger than Desktop HD */
 body {
-  color: white;
   background-color: #1a263d; }
+  body * {
+    box-sizing: border-box; }
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    font-family: "Exo", sans-serif; }
+  body p {
+    font-family: "Open Sans", sans-serif; }
+  body a {
+    color: #ffe160; }
 
-.app-title {
-  font-family: "Exo", sans-serif; }
+.header {
+  color: #ffffff;
+  text-align: center;
+  background-color: #1a263d;
+  padding-top: 35px; }
+  .header__image {
+    width: 175px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+    @media (min-width: 550px) {
+      .header__image {
+        width: 200px; } }
+  .header__title {
+    margin-top: -10px; }
+  .header__description {
+    margin-top: -8px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto; }
+    @media (min-width: 550px) {
+      .header__description {
+        font-size: 1.75rem; } }
 
 /*# sourceMappingURL=style.css.map */

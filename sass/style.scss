@@ -1,12 +1,7 @@
 @import 'base/_normalize';
 @import 'base/_skeleton';
 @import 'base/_variables';
+@import 'base/_global';
+@import 'base/_mixins';
 
-body {
-  color: white;
-  background-color: $blue;
-}
-
-.app-title {
-  font-family: $fontTitle;
-}
+@import 'section/_header';
