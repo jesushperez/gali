@@ -1,0 +1,12 @@
+@import 'base/_normalize';
+@import 'base/_skeleton';
+@import 'base/_variables';
+
+body {
+  color: white;
+  background-color: $blue;
+}
+
+.app-title {
+  font-family: $fontTitle;
+}
