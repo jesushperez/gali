@@ -6,12 +6,9 @@ app = Flask(__name__, static_folder="static")
 
 @app.route('/')
 def hello_world():
-  #url = config.news_url + config.news_key
-  #news = requests.get(url).json()
-
-  with open('test.json', encoding='utf8') as f:
-    data = json.load(f)
-  articles = data['articles']
+  url = config.news_url + config.news_key
+  news = requests.get(url).json()
+  articles = news['articles']
 
   return render_template('index.html', articles=articles)
 
