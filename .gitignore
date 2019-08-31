@@ -230,4 +230,6 @@ $RECYCLE.BIN/
 *.sass.map
 *.scss.map
 
+config.py
+
 # End of https://www.gitignore.io/api/flask,python,windows,visualstudiocode

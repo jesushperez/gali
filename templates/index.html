@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Gali Science</title>
 
   <link href="https://fonts.googleapis.com/css?family=Exo|Open+Sans&display=swap" rel="stylesheet">
 
@@ -16,5 +16,31 @@
     <h1 class="header__title">Gali Science</h1>
     <p class="header__description">The latest science news from across the web. Follow Gali the Science Bot on Twitter <a href="https://twitter.com/GaliScienceBot" target="_blank">@GaliScienceBot</a>.</p>
   </header>
+
+  <section class="container">
+    {%- for row in articles | batch(3, '&nbsp;') %}
+      <div class="row">
+        {%- for article in row %}
+        <div class="article four columns">
+            {% if article.urlToImage %}
+              <a href="{{ article.url }}">
+                <img class="article__image" src="{{ article.urlToImage }}" alt="Article thumbnail image.">
+              </a>
+            {% else %}
+              <img src="{{ url_for('static', filename='placeholder-image.png') }}" class="article__image" alt="Article thumbnail image">
+            {% endif %}
+            {% if article.title %}
+              <h2 class="article__title"><a class="article__link" href="{{ article.url }}" target="_blank">{{ article.title }}</a></h2>
+            {% endif %}
+            {% if article.description %}
+              <p class="article__description">{{ article.description | truncate(70) }}</p>
+            {% else %}
+              <p>No description available for this article.</p>
+            {% endif %}
+          </div>
+        {%- endfor %}
+      </div>
+    {%- endfor %}
+  </section>
 </body>
 </html>

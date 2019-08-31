@@ -349,8 +349,8 @@ template {
   .container {
     width: 85%;
     padding: 0; } }
-/* For devices larger than 550px */
-@media (min-width: 550px) {
+/* For devices larger than 750px */
+@media (min-width: 750px) {
   .container {
     width: 80%; }
 
@@ -804,6 +804,7 @@ there.
 /* Larger than desktop */
 /* Larger than Desktop HD */
 body {
+  color: white;
   background-color: #1a263d; }
   body * {
     box-sizing: border-box; }
@@ -813,6 +814,9 @@ body {
     font-family: "Open Sans", sans-serif; }
   body a {
     color: #ffe160; }
+  body img {
+    max-width: 100%;
+    height: auto; }
 
 .header {
   color: #ffffff;
@@ -839,5 +843,16 @@ body {
     @media (min-width: 550px) {
       .header__description {
         font-size: 1.75rem; } }
+
+.article {
+  margin-top: 45px; }
+  .article__image {
+    width: 100%; }
+  .article__title {
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .article__link {
+    text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,5 @@
 body {
+  color: white;
   background-color: $blue;
 
   * {
@@ -15,5 +16,10 @@ body {
 
   a {
     color: $yellow;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
