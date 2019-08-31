@@ -855,4 +855,10 @@ body {
   .article__link {
     text-decoration: none; }
 
+.footer {
+  margin-top: 35px;
+  margin-bottom: 15px; }
+  .footer__description {
+    text-align: center; }
+
 /*# sourceMappingURL=style.css.map */

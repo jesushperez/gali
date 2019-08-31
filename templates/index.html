@@ -14,14 +14,14 @@
   <header class="header container">
     <img src="{{ url_for('static', filename='logo.png') }}" class="header__image" alt="Icon of Gali the science bot">
     <h1 class="header__title">Gali Science</h1>
-    <p class="header__description">The latest science news from across the web. Follow Gali the Science Bot on Twitter <a href="https://twitter.com/GaliScienceBot" target="_blank">@GaliScienceBot</a>.</p>
+    <p class="header__description">The latest science news from across the web. Follow Gali the Science Bot on Twitter <a href="https://twitter.com/GaliScienceBot">@GaliScienceBot</a>.</p>
   </header>
 
   <section class="container">
     {%- for row in articles | batch(3, '&nbsp;') %}
       <div class="row">
         {%- for article in row %}
-        <div class="article four columns">
+          <div class="article four columns">
             {% if article.urlToImage %}
               <a href="{{ article.url }}">
                 <img class="article__image" src="{{ article.urlToImage }}" alt="Article thumbnail image.">
@@ -30,7 +30,7 @@
               <img src="{{ url_for('static', filename='placeholder-image.png') }}" class="article__image" alt="Article thumbnail image">
             {% endif %}
             {% if article.title %}
-              <h2 class="article__title"><a class="article__link" href="{{ article.url }}" target="_blank">{{ article.title }}</a></h2>
+              <h2 class="article__title"><a class="article__link" href="{{ article.url }}">{{ article.title }}</a></h2>
             {% endif %}
             {% if article.description %}
               <p class="article__description">{{ article.description | truncate(70) }}</p>
@@ -42,5 +42,9 @@
       </div>
     {%- endfor %}
   </section>
+
+  <footer class="footer container">
+    <p class="footer__description">Gali Science is a project by <a href="https://www.jesushperez.com/">Jesus Perez</a>. The articles are provided by <a href="https://newsapi.org">NewsAPI.org</a></p>
+  </footer>
 </body>
 </html>
