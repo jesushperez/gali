@@ -4,4 +4,4 @@ Gali Science is a web app that displays recently published science articles acro
 
 The web app is built on Python Flask.
 
-A twitter bot companion (called Gali Bot) tweets out the articles. It connects with Twitter via Tweepy.
+A twitter bot companion (called Gali Bot) tweets out the articles. It connects with Twitter via Tweepy. View the bot code here: https://github.com/jesushperez/sci-bot
